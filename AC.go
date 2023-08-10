@@ -62,15 +62,14 @@ func dia(n int) string {
 //Verificar se determinado ano eh bisexto
 
 func e_bissexto(n int) string {
-	n %= 4
-	println(n)
-	if n == 0 {
-		return "Ano Bissexto"
-	} else {
-		return "N eh ano Bissexto"
+	if n%4 == 0 {
+		if n%100 != 0 || n%400 == 0 {
+			return "Ano Bissexto"
+		}
 	}
-}
+	return "N eh Bissexto"
 
+}
 func main() {
 
 	fmt.Println(e_primo(7))  //true
@@ -90,4 +89,6 @@ func main() {
 
 	fmt.Println(e_bissexto(1995))
 	fmt.Println(e_bissexto(2016))
+	fmt.Println(e_bissexto(1900))
+
 }
