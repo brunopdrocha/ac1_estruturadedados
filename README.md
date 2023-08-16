@@ -1,3 +1,3 @@
-# ibmec_estruturadedados
-Trabalho de AC1 Estrutura de Dados para Prof. Victor Machado
+# ac1_estruturadedados
+Materia Estrutura de Dados para Prof. Victor Machado
 
