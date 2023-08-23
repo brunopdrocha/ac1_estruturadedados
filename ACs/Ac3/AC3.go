@@ -16,7 +16,7 @@ func main() {
 
 	fmt.Println("Lista de contatos!")
 	for {
-		fmt.Print("Digite (1) para adicionar, (2) para remover, (3) para editar email ou qualquer outra coisa para sair: ")
+		fmt.Print("Digite (1) para adicionar, (2) para remover,(3) para editar email ou qualquer outra coisa para sair:,(4) para vizualizar e-mails registrados ")
 		fmt.Scanln(&opcao)
 
 		switch opcao {
@@ -42,10 +42,12 @@ func main() {
 			email = strings.TrimSpace(email)
 
 			util.EditaEmail(&contatos, ind-1, email)
+
+		case "4":
+			util.ExibeContatos(&contatos)
 		default:
 			return
 		}
 
-		fmt.Println(contatos)
 	}
 }
