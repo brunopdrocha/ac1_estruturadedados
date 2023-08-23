@@ -37,7 +37,7 @@ func ExibeContatos(listaCont *[5]Contato) {
 	fmt.Println("Lista de Contatos:")
 	for ind, contato := range listaCont {
 		if contato.Nome != "" || contato.Email != "" {
-			fmt.Printf("%d Nome: %s | Email: %s\n", ind+1, contato.Nome, contato.Email)
+			fmt.Printf("%dº  Nome: %s | Email: %s\n", ind+1, contato.Nome, contato.Email)
 		}
 	}
 }
