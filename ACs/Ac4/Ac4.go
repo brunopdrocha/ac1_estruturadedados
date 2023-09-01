@@ -25,6 +25,6 @@ func main() {
 
 	fmt.Println("Informe a quantidade de discos:")
 	fmt.Scanln(&n)
-	Hanoi(n, A, B, C)
+	Hanoi(n, A, C, B)
 	fmt.Printf("Quantidade de movimentos total de %d.\n", contadorMovimientos)
 }
