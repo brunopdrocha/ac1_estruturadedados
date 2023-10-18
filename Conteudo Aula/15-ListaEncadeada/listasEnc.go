@@ -11,10 +11,8 @@ type Lista struct {
 	cab *No
 }
 
-//Exibe os nos de lista
-
+// exibe os nós da lista
 func (l *Lista) exibe() {
-
 	no := l.cab
 
 	for no != nil {
@@ -23,22 +21,19 @@ func (l *Lista) exibe() {
 	}
 }
 
-//busca simples de nos da lista
-
+// busca simples dos nós da lista
 func (l *Lista) buscaSimples(ch int) *No {
-
 	no := l.cab
 
 	for no != nil {
-		if no.chave == ch {
-			return no
-		}
+		if no.chave == ch { return no }
+		no = no.prox
 	}
+
 	return nil
 }
 
-//Insere No no final da lista
-
+// insere nó no final da lista
 func (l *Lista) insere(ch int) {
 	novoNo := &No{chave: ch}
 	no := l.cab
@@ -53,50 +48,69 @@ func (l *Lista) insere(ch int) {
 	}
 }
 
-//busca um No em uma lista ordenada
+// busca um nó em uma lista ordenada
 func (l *Lista) busca(ch int) (*No, *No) {
 	var ant *No
 	no := l.cab
 
-	if no == nil {
-		return nil, nil
-	}
+	if no == nil { return nil, nil }
 
 	for no != nil {
-		if no.chave == ch {
-			return ant, no
-		}
-		if no.chave > ch {
-			return ant, nil
-		}
+		if no.chave == ch { return ant, no }
+		if no.chave > ch { return ant, nil }
 
 		ant = no
 		no = no.prox
 	}
+
 	return ant, nil
 }
 
-//insere um No em uma lista ordenada
+// insere um nó em uma lista ordenada
+func (l *Lista) insereOrd(ch int) {
+	ant, no := l.busca(ch)
 
-//remove um No em uma lista ordenada
+	if no != nil { return }
 
-//Funcao main
+	novoNo := &No{chave: ch}
+	if ant == nil {
+		novoNo.prox = l.cab
+		l.cab = novoNo
+	} else {
+		novoNo.prox = ant.prox
+		ant.prox = novoNo
+	}
+}
+
+// remove um nó em uma lista ordenada
+func (l *Lista) remove(ch int) *No {
+	ant, no := l.busca(ch)
+
+	if no == nil { return nil }
+
+	if ant == nil {
+		l.cab = no.prox
+	} else {
+		ant.prox = no.prox
+	}
+
+	return no
+}
+
 func main() {
 	var l Lista
-	//l insere
 
-	l.insere(2)
-	l.insere(4)
-	l.insere(6)
-	l.insere(8)
-	
+	l.insereOrd(2)
+	l.insereOrd(1)
+	l.insereOrd(9)
+	l.insereOrd(3)
+
+	l.remove(0)
+	l.remove(1)
+	l.remove(9)
 	l.exibe()
-
-	//l.exibe
-
-	//fmt.Println(l.buscaSimples(0))
-	//fmt.Println(l.buscaSimples(7))
-	//fmt.Println(l.buscaSimples(3))
-	//fmt.Println(l.buscaSimples(4))
-
+	// fmt.Println(l.buscaSimples(0))
+	// fmt.Println(l.buscaSimples(7))
+	// fmt.Println(l.buscaSimples(3))
+	// fmt.Println(l.buscaSimples(4))
 }
