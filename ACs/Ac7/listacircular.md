@@ -15,7 +15,7 @@
 
     funcao ExibirListaCircular(Lista Circular):
         no = Lista.cab
-        para no não nulo:
+        para no não é nulo:
           escreve(no)
           no = no.proximo
 # Inserção de um nó no início da Lista
