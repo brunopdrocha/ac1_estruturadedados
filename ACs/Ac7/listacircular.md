@@ -11,6 +11,9 @@
         Dado: valor
         Próximo: ponteiro para o próximo nó na lista circular
 
+    Estrutura Lista:
+     cab No //Cabeca
+
 # Exibição dos Nós em uma Lista Circular
 
     funcao ExibirListaCircular(Lista Circular):
