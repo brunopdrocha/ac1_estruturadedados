@@ -15,7 +15,7 @@
 
     funcao ExibirListaCircular(Lista Circular):
         no = Lista.cab
-        para no != nulo:
+        para no não nulo:
           escreve(no)
           no = no.proximo
 # Inserção de um nó no início da Lista
@@ -26,7 +26,7 @@
         newNovo.proximo = novoNo
         senao 
           atual = ListaCircular.proximo
-          enquanto atual.proximo != ListaCircular.proximo
+          enquanto atual.proximo não é ListaCircular.proximo
             atual = atual.proximo
           atual.proximo = novoNo
       ListaCircular.inicio = novoNo
@@ -41,7 +41,7 @@
        ListaCircular.Inicio = nil
        senao
        atual = ListaCircular= inicio
-       enquanto atual.proximo != ListaCircular.Proximo:
+       enquanto atual.proximo não é ListaCircular.Proximo:
          atual = atual.Proximo
 
         atual.Proximo = ListaCircular.Proximo
