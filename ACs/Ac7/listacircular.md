@@ -1,24 +1,24 @@
-#Lista Circular
+# Lista Circular
   
   Uma lista circular é uma estrutura de dados onde o último nó está conectado ao primeiro, criando um ciclo. 
   Nela, podemos realizar três operações principais: exibição dos nós, inserção de um nó no início e exclusão do primeiro nó.
   Antes devemos entendar a base de uma Estrutura do Nó
 
 
-#Estrutura do Nó:
+# Estrutura do Nó:
 
     Estrutura Nó:
         Dado: valor
         Próximo: ponteiro para o próximo nó na lista circular
 
-#Exibição dos Nós em uma Lista Circular
+# Exibição dos Nós em uma Lista Circular
 
     funcao ExibirListaCircular(Lista Circular):
         no = Lista.cab
         para no != nulo:
           escreve(no)
           no = no.proximo
-#Inserção de um nó no início da Lista
+# Inserção de um nó no início da Lista
 
     funcao InserirPrimeiroNo(Lista Circular)(valor int):
       novoNo = No{Dado = Valor, Prox = ListaCircular.Inicio}
@@ -33,7 +33,7 @@
       
   
 
-#Exclusão do Primeiro Nó
+#  Exclusão do Primeiro Nó
 
     funcao ExcluirPrimeiroNo(Lista Circular)
 
