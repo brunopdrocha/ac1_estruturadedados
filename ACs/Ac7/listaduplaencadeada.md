@@ -24,7 +24,7 @@ A seguir estão as descrições dos nós ordenados em uma lista duplamente encad
 
 # Busca de um nó em uma Lista Duplamente Encadeada
 
-        Funcao BuscaListaDuipla(Lista Encadeada) (ch int):
+        Funcao BuscaListaDupla(Lista Encadeada) (ch int):
             no = ListaEncadeada.cab
             para no não é nulo:
                 se no.Dado = ch:
@@ -35,7 +35,7 @@ A seguir estão as descrições dos nós ordenados em uma lista duplamente encad
             
 # Inserção de um nó em uma Lista Duplamente Encadeada
 
-        Funcao BuscaListaDuipla(Lista Encadeada) (ch int):
+        Funcao InsereListaDuipla(Lista Encadeada) (ch int):
             Novono = No {Dado: ch}
             se no.cab = nulo:
                 ListaEncadeada.cb = Novono
@@ -58,3 +58,14 @@ A seguir estão as descrições dos nós ordenados em uma lista duplamente encad
                 no.Proximo = NovoNo
                 
 # Remoção de um nó em uma Lista Duplamente Encadeada
+
+        Funcao RemoveListaDupla(Lista Enceada)(ch int)?
+            noRemove = ListaEncadeada.BuscaLista(dado)
+            se noRemove.Anterior não é nulo:
+                noRemove.Anterior.Proximo = noRemove.Proximo
+            senao:
+                ListaEncaeada.Cab = noRemove.Proximo
+            se noRemove.Proximo não é  nulo:
+                noRemove.Proximo.Anterior = noRemove.Anterior
+            senao:
+                ListaEncadeada = noRemove.Anterior
