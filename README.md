@@ -1,3 +1,3 @@
 
-# Material Estrutura de Dados para Prof. Victor Machado
+# Material Estrutura de Dados de Prof. Victor Machado
 
